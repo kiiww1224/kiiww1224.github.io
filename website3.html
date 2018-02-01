@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="/css/lightbox.min.css">
+
+
+    <style>
+        body,
+        html {
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            font-family: 微軟正黑體;
+        }
+
+        .nav {
+            width: 100%;
+            height: 60px;
+            background-color: white;
+            position: fixed;
+            top: 0;
+            z-index: 90;
+            opacity: 0.9;
+        }
+
+        .logo {
+            margin-left: 2%;
+            float: left;
+            line-height: 60px;
+            font-size: 32px;
+            font-family: 微軟正黑體;
+            font-weight: bold;
+        }
+
+        .nav li {
+            font-size: 16px;
+            font-family: 微軟正黑體;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            line-height: 30px;
+            display: inline-block;
+            margin-left: 3%;
+        }
+
+        .nav li:hover {}
+
+        .contact {
+            float: right;
+            color: white;
+            font-family: 微軟正黑體;
+            font-size: 10px;
+            letter-spacing: 1.5px;
+            height: 100%;
+            width: 80px;
+            background-color: #B73939;
+            text-align: center;
+            line-height: 90px;
+        }
+
+        .mail {
+            position: absolute;
+            right: 27px;
+            top: 50%;
+            transform: translate(0, -60%);
+            height: 25px;
+            width: 25px;
+            background-size: cover;
+            background-image: url('/img/mail.png');
+        }
+
+        .indexpic {
+            position: relative;
+            margin: auto;
+            width: 95%;
+            height: 90vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .index_text {
+            left: 50%;
+            top: 100%;
+            transform: translate(-50%, -50%);
+            height: 140px;
+            width: 780px;
+            background-color: #fff;
+            opacity: 0.9;
+            position: absolute;
+            font-size: 20px;
+            font-weight: bold;
+            box-shadow: #3E3A39 1px 2px 2px;
+            z-index: 60;
+        }
+
+        .indexpic_left {
+            position: relative;
+            height: 100%;
+            width: 50%;
+            float: left;
+            background-size: cover;
+            background-image: url('/img/indexpic_right.jpg');
+            filter: brightness(20%);
+            transition: 1s;
+        }
+
+        .indexpic_left:hover {
+            filter: brightness(1);
+        }
+
+        .indexpic_left:hover .indexpic_left_text,
+        .indexpic_right:hover .indexpic_right_text {
+            opacity: 0.8;
+        }
+
+        .indexpic_left_text {
+            position: absolute;
+            right: -10px;
+            top: 35%;
+            height: 40px;
+            width: 240px;
+            background-color: #270f13;
+            color: white;
+            opacity: 0.3;
+            font-size: 36px;
+            letter-spacing: 3px;
+            padding: 8px 10px 8px 10px;
+            transition: 1s;
+            border-radius: 5px;
+        }
+
+        .indexpic_right {
+            position: relative;
+            height: 100%;
+            width: 50%;
+            float: left;
+            background-size: cover;
+            background-image: url('/img/indexpic_left.jpg');
+            filter: brightness(20%);
+            transition: 1s;
+            overflow: hidden;
+        }
+
+        .indexpic_right:hover {
+            filter: brightness(1);
+        }
+
+        .indexpic_right_text {
+            writing-mode: lr;
+            position: absolute;
+            left: -10px;
+            top: 35%;
+            height: 180px;
+            width: 40px;
+            background-color: #270f13;
+            color: white;
+            opacity: 0.3;
+            font-size: 48px;
+            letter-spacing: 3px;
+            padding: 6px 20px 20px 12px;
+            transition: 1s;
+            border-radius: 5px;
+
+
+        }
+
+        #openPhonea {
+            width: 100%;
+            height: 150px;
+            position: relative;
+        }
+
+        .openPhone {}
+
+        .openPhoneimg1 {
+            height: 50%;
+            padding: 30px 0;
+            float: left;
+            padding-left: 10px;
+        }
+
+        .openPhoneimg2 {
+            height: 50%;
+            padding: 37px 0 37px 10px;
+            float: left;
+        }
+
+        .openPhone_text1 {
+            float: left;
+            width: 170px;
+            padding: 30px 5px 30px 20px;
+            line-height: 40px;
+        }
+
+        .openPhone_text2 {
+            float: left;
+            width: 170px;
+            padding: 30px 4px 30px 10px;
+            line-height: 40px;
+        }
+
+        .openPhone_line {
+            float: left;
+            font-size: 28px;
+            padding: 48px 0;
+        }
+
+        .openPhone_text3 {
+            float: left;
+            width: 190px;
+            font-size: 29px;
+            padding: 50px 0px 50px 10px;
+            line-height: 40px;
+        }
+
+        #News {
+            top: 50px;
+            letter-spacing: 3px;
+            font-size: 40px;
+            font-weight: bold;
+            width: 95%;
+            margin: auto;
+            text-align: center;
+            padding-bottom: 60px;
+            color: #3E3A39;
+            position: relative;
+        }
+
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        li a {
+            padding: 0 0 10px;
+        }
+
+        li a::after {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: #fff;
+            content: '';
+            opacity: 0;
+            -webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+            -moz-transition: height 0.3s, opacity 0.3s, -moz-transform 0.3s;
+            transition: height 0.3s, opacity 0.3s, transform 0.3s;
+            -webkit-transform: translateY(-10px);
+            -moz-transform: translateY(-10px);
+            transform: translateY(-10px);
+        }
+
+        li a:hover::after,
+        li a:focus::after {
+            height: 5px;
+            opacity: 1;
+            -webkit-transform: translateY(0px);
+            -moz-transform: translateY(0px);
+            transform: translateY(0px);
+        }
+
+
+
+        .News_BOX {
+            background-color: white;
+            color: white;
+            padding-top: 50px;
+            letter-spacing: 1px;
+        }
+
+        .row_news {
+            width: 95%;
+            display: flex;
+            flex-wrap: wrap;
+            margin: auto;
+            background-color: #1A1A1A;
+            font-size: 18px;
+        }
+
+        .news1_left,
+        .news2_left,
+        .news3_left {
+            width: 50%;
+            height: 500px;
+        }
+
+        .news1_right,
+        .news2_right,
+        .news3_right {
+            width: 50%;
+            height: 500px;
+        }
+
+        .news1_left {
+            background-image: url('/img/飛鏢機.jpg');
+            background-size: cover;
+
+        }
+
+        .news2_right {
+            background-image: url('/img/跨年休息後.jpg');
+            background-size: cover;
+        }
+
+        .news3_left {
+            background-image: url('/img/聖誕2.jpg');
+            background-size: cover;
+        }
+
+        .news1_right h2,
+        .news1_right p,
+        .news2_left h2,
+        .news2_left p,
+        .news3_right h2,
+        .news3_right p {
+            padding: 0 60px;
+            color: white;
+        }
+
+        .news1_right h3,
+        .news1_right h2,
+        .news2_left h3,
+        .news2_left h2,
+        .news3_right h3,
+        .news3_right h2 {
+            text-align: center;
+        }
+
+        .news1_right h2,
+        .news2_leftt h2,
+        .news3_right h2 {
+            top: 50px;
+        }
+
+        .news1_right p,
+        .news2_left p,
+        .news3_right p {
+            line-height: 30px;
+        }
+
+        .news1:hover .news1_left {
+            filter: grayscale(0%) brightness(1);
+        }
+
+        .news2:hover .news2_right {
+            filter: grayscale(0%) brightness(1);
+        }
+
+        .news3:hover .news3_left {
+            filter: grayscale(0%) brightness(1);
+        }
+
+        @media screen and (max-width:992px) {
+            .col-sm-6 {
+                width: 100%;
+            }
+            .order-1 {
+                order: 1;
+            }
+            .order-2 {
+                order: 2;
+            }
+            .hot1,
+            .hot2,
+            .hot3 {
+                width: 100%;
+            }
+            .hot2 h2,
+            .hot3 h2 {
+                border: none;
+            }
+        }
+
+
+        #whatis {
+            margin-top: 80px;
+            width: 100%;
+            height: 1500px;
+            background-image: url('/img/whatis.png');
+            background-size: cover;
+            position: relative;
+        }
+
+        .boxb {
+            width: 400px;
+            height: 250px;
+            position: absolute;
+        }
+
+        .boxb1 {
+            top: 160px;
+            right: 150px;
+        }
+
+        .boxb2 {
+            top: 560px;
+            left: 150px;
+        }
+
+        .boxb3 {
+            top: 960px;
+            right: 150px;
+        }
+
+        .bluetitle,
+        .greentitle,
+        .purpletitle {
+            letter-spacing: 3px;
+            font-size: 32px;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 5px;
+            margin-left: 18px;
+        }
+
+        .bluetext,
+        .greentext,
+        .purpletext {
+            padding: 14px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            line-height: 28px;
+            letter-spacing: 2px;
+
+        }
+
+        .bluetext {
+            background-color: rgba(45, 167, 224, 0.7);
+        }
+
+        .greentext {
+            background-color: rgba(19, 173, 103, 0.7);
+        }
+
+        .purpletext {
+            background-color: rgba(142, 79, 155, 0.7);
+        }
+
+        .purpletext li {
+            background-color: #F7F7F7;
+            color: #3E3A39;
+            display: inline-block;
+            border-radius: 5px;
+            padding: 3px 8px;
+            margin-left: 4%;
+        }
+
+        #hots {
+            top: 50px;
+            letter-spacing: 3px;
+            font-size: 40px;
+            font-weight: bold;
+            width: 95%;
+            margin: auto;
+            text-align: center;
+            padding-bottom: 60px;
+            color: #3E3A39;
+            position: relative;
+        }
+
+        .hot_BOX {
+            display: flex;
+            flex-wrap: wrap;
+            width: 95%;
+            margin: 0 auto;
+        }
+
+        .hot1,
+        .hot2,
+        .hot3 {
+            flex: 1;
+        }
+
+        
+
+        .hot1,
+        .hot2,
+        .hot3 {
+            height: 500px;
+            display: inline-block;
+        }
+
+        .diamond1,
+        .diamond2,
+        .diamond3 {
+            height: 50px;
+            width: 50px;
+            background-size: cover;
+            margin: auto;
+        }
+
+        .diamond1 {
+            background-image: url('/img/1.png');
+        }
+
+        .diamond2 {
+            background-image: url('/img/2.png');
+        }
+
+        .diamond3 {
+            background-image: url('/img/3.png');
+        }
+
+        .hot1 h2,
+        .hot2 h2,
+        .hot3 h2 {
+            text-align: center;
+        }
+
+        .hot2 h2,
+        .hot3 h2 {
+        }
+
+        .hot2 p,
+        .hot3 p {
+            padding: 0 40px;
+            line-height: 28px;
+        }
+
+        .hot1 p {
+            padding: 0 40px;
+            line-height: 28px;
+        }
+
+        .hot1_pic,
+        .hot2_pic,
+        .hot3_pic {
+            margin: 0 auto;
+            height: 200px;
+            width: 300px;
+            border-radius: 15px;
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        .hot1_pic {
+            background-image: url('/img/three.jpg');
+        }
+
+        .hot2_pic {
+            background-image: url('/img/war.jpg');
+        }
+
+        .hot3_pic {
+            background-image: url('/img/card.jpg');
+        }
+
+        .hot1_pic img,
+        .hot2_pic img,
+        .hot3_pic img {
+            width: 100%;
+            height: 100%;
+            filter: brightness(50%);
+            transition: 1s;
+        }
+
+        .hot1_pic img:hover,
+        .hot2_pic img:hover,
+        .hot3_pic img:hover {
+            filter: brightness(1)
+        }
+
+
+
+
+        #menus {
+            top: 100px;
+            letter-spacing: 3px;
+            font-size: 40px;
+            font-weight: bold;
+            width: 95%;
+            margin: auto;
+            text-align: center;
+            padding-bottom: 60px;
+            color: #3E3A39;
+            position: relative;
+        }
+
+        ul.accordion {
+            list-style: none;
+            position: absolute;
+            left: 50%;
+            top: 80px;
+            transform: translate(-50%, 0);
+            font-family: Cambria, serif;
+            font-size: 16px;
+            font-style: italic;
+            line-height: 1.5em;
+        }
+
+        ul.accordion li {
+            float: right;
+            width: 1000px;
+            height: 200px;
+            display: block;
+            border-right: 2px solid #fff;
+            border-bottom: 2px solid #fff;
+            background-color: #fff;
+            background-repeat: no-repeat;
+            background-position: center center;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            -moz-box-shadow: 1px 3px 15px #555;
+            -webkit-box-shadow: 1px 3px 15px #555;
+            box-shadow: 1px 3px 15px #555;
+        }
+
+        ul.accordion li.bg1 {
+            background-image: url('/img/food.jpg');
+        }
+
+        ul.accordion li.bg2 {
+            background-image: url('/img/drink.jpg');
+        }
+
+        ul.accordion li.bleft {
+            border-left: 2px solid #fff;
+        }
+
+        ul.accordion li .heading {
+            padding: 10px;
+            margin-top: 60px;
+            text-transform: uppercase;
+            font-style: normal;
+            font-weight: bold;
+            letter-spacing: 1px;
+            font-size: 30px;
+            color: white;
+            text-align: center;
+            text-shadow: -1px -1px 1px #ccc;
+        }
+
+
+        ul.accordion li .description {
+            position: absolute;
+            width: 90%;
+            height: 400px;
+            background-color: #fff;
+            bottom: 0px;
+            display: none;
+            opacity: 0.7;
+        }
+
+        ul.accordion li .description h2 {
+            text-transform: uppercase;
+            font-style: normal;
+            font-weight: bold;
+            letter-spacing: 1px;
+            font-size: 45px;
+            color: #444;
+            text-align: left;
+            margin: 0px 0px 15px 20px;
+            text-shadow: -1px -1px 1px #ccc;
+        }
+
+        ul.accordion li .description p {
+            line-height: 30px;
+            margin: 50px 50px;
+            font-family: 微軟正黑體;
+            font-size: 20px;
+            font-style: italic;
+            font-weight: bold;
+            text-transform: none;
+            letter-spacing: normal;
+            line-height: 1.6em;
+        }
+
+        ul.accordion li .description a {
+            position: absolute;
+            bottom: 5px;
+            left: 20px;
+            text-transform: uppercase;
+            font-style: normal;
+            font-size: 11px;
+            text-decoration: none;
+            color: #888;
+        }
+
+        ul.accordion li .description a:hover {
+            color: #333;
+            text-decoration: underline;
+        }
+
+        ul.accordion li .bgDescription {
+            background: transparent url(../images/bgDescription.png) repeat-x top left;
+            height: 340px;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            width: 100%;
+            display: none;
+        }
+
+        .description p {
+            float: left;
+        }
+
+        .menus_a {
+            position: relative;
+            width: 100%;
+        }
+
+        #consume {
+            top: 1000px;
+            letter-spacing: 3px;
+            font-size: 40px;
+            font-weight: bold;
+            width: 95%;
+            margin: auto;
+            text-align: center;
+            padding-bottom: 60px;
+            color: #3E3A39;
+            position: relative;
+        }
+
+        .consume_text {
+            width: 100%;
+            height: 500px;
+            top: 950px;
+            text-align: center;
+            position: relative;
+            font-size: 20px;
+            line-height: 32px
+        }
+
+        .form_BOX {
+            top: 1000px;
+            width: 500px;
+            border: solid 1px;
+            position: relative;
+            margin: auto;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="mail"></div>
+        <div class="logo">logo</div>
+        <div class="contact">contact
+
+        </div>
+        <ul>
+            <li>
+                <a href="#News">最新消息</a>
+            </li>
+            <li>
+                <a href="#whatis">什麼是桌遊?</a>
+            </li>
+            <li>
+                <a href="#hots">熱門遊戲</a>
+            </li>
+            <li>
+                <a href="#menus">精緻餐點</a>
+            </li>
+            <li>
+                <a href="#consume">消費模式</a>
+            </li>
+        </ul>
+
+    </div>
+    <div class="indexpic">
+        <div class="index_text">
+            <img src="/img/icon-hours.png" class="openPhoneimg1" alt="">
+            <div class="openPhone_text1">平日：1500-2200週五：1500-2300</div>
+            <div class="openPhone_text2">週六：1100-2300週日：1100-2200</div>
+            <div class="openPhone_line">｜</div>
+            <img src="/img/icon-pnone.png" class="openPhoneimg2" alt="">
+            <div class="openPhone_text3">04-25260200</div>
+        </div>
+        <div class="indexpic_left">
+            <div class="indexpic_left_text">歡樂桌遊盡在</div>
+        </div>
+        <div class="indexpic_right">
+            <div class="indexpic_right_text">桌上說</div>
+        </div>
+    </div>
+    <div id="openPhonea">
+        <div class="openPhone">
+        </div>
+    </div>
+    <div id="News">最新消息</div>
+    <div class="News_BOX">
+        <div class="news1 row_news">
+            <div class="news1_left col-sm-6"></div>
+            <div class="news1_right col-sm-6">
+                <h2>
+                    <br>
+                    <br>
+                    <br> 「飛鏢機來啦！！是連線的DARTSLIVE2」
+                </h2>
+                <h3>-2018/1/5-</h3>
+                <p>你們雨天不要宅惹，要宅就要聚在一起宅!練鏢以及電你朋友的好地方！！這禮拜PK店長成功可以獲得小禮物!</p>
+
+            </div>
+        </div>
+        <div class="news2 row_news">
+            <div class="news2_left col-sm-6 order-2">
+                <h2>
+                    <br>
+                    <br>
+                    <br> 「跨年狂歡休息後可以再來集合了唷!」
+                </h2>
+                <h3>-2018/1/5-</h3>
+                <p>本次新增：試個好遊戲、欲罷不能、格格不入、法老密碼、飛躍魔盜團、骰越生死線、SPYFALL2、炸彈BOOM、說夢人、力爭上游、全力衝廁。</p>
+            </div>
+            <div class="news2_right col-sm-6 order-1"></div>
+        </div>
+        <div class="news3 row_news">
+            <div class="news3_left col-sm-6"></div>
+            <div class="news3_right col-sm-6">
+                <h2>
+                    <br>
+                    <br>
+                    <br> 「聖誕節結束就是跨年活動來啦！」
+                </h2>
+                <h3>-2018/1/5-</h3>
+                <p>跨年當天入場可享50元飲品任選一杯，打卡出示贈送薯條，並且加長營業時間到凌晨兩點唷目前預約踴躍，快呼朋引伴揪團來唷！</p>
+            </div>
+        </div>
+    </div>
+    <div id="whatis">
+        <div class="boxb boxb1" data-aos="zoom-out-left">
+            <div class="bluetitle">什麼是桌遊?</div>
+            <div class="bluetext">
+                桌遊起源於歐美國家，因為歐美國家的冬天又冷又漫長，大多時間全家人都聚在火爐邊聊天談心，因此桌上遊戲的原始設計動機，就是為了讓這樣的家人團聚時間，除了聊天之外還多了可以一起玩遊戲的活動。而家中長輩也可以藉由遊戲的過程中，傳承一些人生的觀念知識給下一代。
+            </div>
+        </div>
+        <div class="boxb boxb2" data-aos="zoom-out-right">
+            <div class="greentitle">新興休閒型態</div>
+            <div class="greentext">
+                近年來不少桌遊在學校中用在課後教育上讓認識桌遊的人慢慢增多，而桌遊店算是一個新型態的休閒場所，與網咖店比較起來，卻多了點健康，動腦，互動的歡樂。如果你厭倦了一個人一直重複動作的電腦或手機遊戲，不如約起朋友踏入桌遊店，試著玩玩看桌上遊戲帶來的新奇樂趣。
+            </div>
+        </div>
+        <div class="boxb boxb3" data-aos="zoom-out-left">
+            <div class="purpletitle">桌遊分類</div>
+            <div class="purpletext">
+                桌上遊戲可以依照使用的道具，大致分為下列幾類：
+                <ul>
+                    <li>圖版</li>
+                    <li class="卡片">卡片</li>
+                    <li class="骰子">骰子</li>
+                    <li class="紙筆">紙筆</li>
+                </ul>
+                像是西洋棋與西洋跳棋之類的棋類，被歸類為圖板遊戲。有些遊戲使用用具的分類方式會出現歧義，例如世界知名的大富翁就同時使用了棋盤、骰子及卡片。 一般而言，圖板遊戲在區域遊戲表現上最佳；卡片遊戲則以簡短取勝；骰子遊戲的隨機性是趣味所在；紙筆在推理遊戲最常使用。
+            </div>
+        </div>
+    </div>
+    <div id="hots">熱門遊戲</div>
+    <div class="hot_BOX">
+        <div class="hot1 row_hot col-sm-6">
+            <div class="diamond1"></div>
+            <h2>三國殺</h2>
+            <p>三國殺是一款桌上紙牌遊戲。以中國的三國時代為背景，玩家分別扮演主公、忠臣、反賊、內奸四類身份。遊戲人數為2-10人。</p>
+            <div class="hot1_pic">
+                <a href="/img/three.jpg" data-lightbox="roadtrip">
+                    <img src="/img/three.jpg" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="hot2 row_hot col-sm-6">
+            <div class="diamond2"></div>
+            <h2>阿瓦隆</h2>
+            <p>遊戲中玩家們扮演著正義與邪惡兩方陣營，只要正義方成功完成任務，，同時刺客未成功刺殺梅林，正義方即為遊戲贏家。反之則為邪惡方獲勝。</p>
+            <div class="hot2_pic">
+                <a href="/img/war.jpg" data-lightbox="roadtrip">
+                    <img src="/img/war.jpg" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="hot3 row_hot col-sm-6">
+            <div class="diamond3"></div>
+            <h2>卡卡頌</h2>
+            <p>遊戲以紙牌建構出中古世紀的地景，玩家須將地形卡銜接相同地形，並考慮派出隨從佔領。當最後一塊紙牌被放下後，則遊戲結束。分數最高分者獲勝。</p>
+            <div class="hot3_pic">
+                <a href="/img/card.jpg" data-lightbox="roadtrip">
+                    <img src="/img/card.jpg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="menus">精緻餐點</div>
+    <div class="menus_a">
+        <ul class="accordion" id="accordion">
+            <li class="bg1">
+                <div class="heading">輕食</div>
+                <div class="bgDescription"></div>
+                <div class="description">
+                    <p>綜合拼盤
+                        <br>歡樂分享拼盤
+                        <br>薯條/薯餅/雞塊
+                        <br>洋蔥圈
+                        <br>可樂餅
+                        <br>雞米花
+                        <br>雞柳條
+                        <br>檸檬翅小腿
+                        <br>厚片(巧克力、花生)
+                        <br>蘿蔔糕</p>
+                    <p>$100
+                        <br>$150
+                        <br>$50
+                        <br>$50
+                        <br>$50
+                        <br>$80
+                        <br>$80
+                        <br>$80
+                        <br>$40
+                        <br>$50</p>
+                    <p>鐵板麵
+                        <br>小披薩
+                        <br>鬆餅
+                        <br>牛肉泡麵/雞絲麵
+                        <br>蛋炒飯
+                        <br>招牌咖哩飯
+                        <br>紅燒牛腩飯
+                        <br>黑楜椒辣味牛腩飯
+                        <br>青菜湯/紫菜蛋花湯
+                        <br>水餃(10顆)</p>
+                    <p>$100
+                        <br>$150
+                        <br>$50
+                        <br>$50
+                        <br>$50
+                        <br>$80
+                        <br>$80
+                        <br>$80
+                        <br>$40
+                        <br>$50</p>
+                </div>
+            </li>
+            <li class="bg2">
+                <div class="heading">飲品</div>
+                <div class="bgDescription"></div>
+                <div class="description">
+                    <p>梅子可樂
+                        <br>梅子雪碧
+                        <br>金桔茶(冰,熱)
+                        <br>檸檬紅茶(冰,熱)
+                        <br>可爾必思
+                        <br>可爾必思特調
+                        <br>奶茶(冰,熱)
+                        <br>蜂蜜綠
+                        <br>蜂蜜柚子(冰,熱)
+                        <br>可可拿鐵(冰,熱)</p>
+                    <p>$50
+                        <br>$50
+                        <br>$50
+                        <br>$50
+                        <br>$50
+                        <br>$50
+                        <br>$60
+                        <br>$50
+                        <br>$60
+                        <br>M$60/L$80
+                        <br>
+                    </p>
+                    <p>*香醇咖啡
+                        <br>美式(冰,熱)
+                        <br>拿鐵(冰,熱)</p>
+                    <p>M$45/L$60
+                        <br>M$60/L$80</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div id="consume">消費模式</div>
+    <div class="consume_text">
+        <h2>平日</h2>
+        <p>100元/位</p>
+        <p>*可折餐飲30元</p>
+        <p>(週五1700後以假日計)</p>
+        <h2>假日</h2>
+        <p>150元/位</p>
+        <p>*可折餐飲50元</p>
+        <h2>玩飛鏢</h2>
+        <p>50元/位</p>
+    </div>
+    <div class="Contact">Contact</div>
+    <form>
+        <div class="form_BOX">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+        });
+    </script>
+
+    <script>
+        // ------------------------------
+        // https://twitter.com/mattsince87
+        // ------------------------------
+
+        function scrollNav() {
+            $('.nav a').click(function () {
+                //Toggle Class
+                $(".active").removeClass("active");
+                $(this).closest('li').addClass("active");
+                var theClass = $(this).attr("class");
+                $('.' + theClass).parent('li').addClass('active');
+                //Animate
+                $('html, body').stop().animate({
+                    scrollTop: $($(this).attr('href')).offset().top - 140
+                }, 1000);
+                return false;
+            });
+            $('.scrollTop a').scrollTop();
+        }
+        scrollNav();
+    </script>
+
+    <script src="/js/lightbox.min.js"></script>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#accordion > li').hover(
+                function () {
+                    var $this = $(this);
+                    $this.stop().animate({ 'height': '600px' }, 500);
+                    $('.heading', $this).stop(true, true).fadeOut();
+                    $('.bgDescription', $this).stop(true, true).slideDown(500);
+                    $('.description', $this).stop(true, true).fadeIn();
+                },
+                function () {
+                    var $this = $(this);
+                    $this.stop().animate({ 'height': '200px' }, 1000);
+                    $('.heading', $this).stop(true, true).fadeIn();
+                    $('.description', $this).stop(true, true).fadeOut(500);
+                    $('.bgDescription', $this).stop(true, true).slideUp(700);
+                }
+            );
+        });
+    </script>
+</body>
+
+</html>

@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="/css/lightbox.min.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="stylesheet.css">
 
     <style>
         body,
@@ -23,62 +25,88 @@
             font-family: 微軟正黑體;
         }
 
-        .nav {
+        a {
+            text-decoration: none;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        /*Início das configurações da header*/
+
+        header {
             width: 100%;
             height: 60px;
-            background-color: white;
-            position: fixed;
-            top: 0;
-            z-index: 90;
-            opacity: 0.9;
-        }
-
-        .logo {
-            margin-left: 2%;
-            float: left;
             line-height: 60px;
-            font-size: 32px;
-            font-family: 微軟正黑體;
-            font-weight: bold;
-        }
-
-        .nav li {
-            font-size: 16px;
-            font-family: 微軟正黑體;
-            font-weight: bold;
-            letter-spacing: 1.5px;
-            line-height: 30px;
-            display: inline-block;
-            margin-left: 3%;
-        }
-
-        .nav li:hover {}
-
-        .contact {
-            float: right;
-            color: white;
-            font-family: 微軟正黑體;
-            font-size: 10px;
-            letter-spacing: 1.5px;
-            height: 100%;
-            width: 80px;
-            background-color: #B73939;
             text-align: center;
-            line-height: 90px;
+            font-size: 20px;
+            letter-spacing: 1px;
+            background-color: #fff;
+            position: fixed;
+            opacity: 0.9;
+            z-index: 90;
         }
 
-        .mail {
-            position: absolute;
-            right: 27px;
-            top: 50%;
-            transform: translate(0, -60%);
-            height: 25px;
-            width: 25px;
-            background-size: cover;
-            background-image: url('/img/mail.png');
+        .logo_img {
+            max-height: 60px;
         }
 
-        .indexpic {
+        .brand {
+            width: auto;
+            height: 100%;
+            float: left;
+            margin: 0 0 0 5%;
+        }
+
+        /*Início das configurações da Navigation*/
+
+        .menu {
+            width: 60%;
+            height: 100%;
+            float: right;
+        }
+
+
+        .menu ul {
+            width: 100%;
+            height: inherit;
+            margin: 0;
+            padding: 0;
+            display: -webkit-box;
+            /* OLD - iOS 6-, Safari 3.1-6 */
+            display: -moz-box;
+            /* OLD - Firefox 19- (buggy but mostly works) */
+            display: -ms-flexbox;
+            /* TWEENER - IE 10 */
+            display: -webkit-flex;
+            /* NEW - Chrome */
+            display: flex;
+            /* NEW, Spec - Opera 12.1, Firefox 20+ */
+        }
+
+        .menu ul a {
+            width: 20%;
+            height: inherit;
+            color: #222;
+            display: inline-block;
+            transition: 1s;
+        }
+
+        .menu ul a:hover {
+            background-color: #270f13;
+            color: #fff;
+        }
+
+        #menuToggle {
+            display: none;
+        }
+
+        .menu-icon {
+            display: none;
+        }
+
+        #indexpic {
             position: relative;
             margin: auto;
             width: 95%;
@@ -123,17 +151,18 @@
         }
 
         .indexpic_left_text {
+            writing-mode: lr;
             position: absolute;
             right: -10px;
-            top: 35%;
-            height: 40px;
-            width: 240px;
+            top: 22%;
+            height: 380px;
+            width: 40px;
             background-color: #270f13;
             color: white;
             opacity: 0.3;
-            font-size: 36px;
+            font-size: 48px;
             letter-spacing: 3px;
-            padding: 8px 10px 8px 10px;
+            padding: 6px 20px 20px 12px;
             transition: 1s;
             border-radius: 5px;
         }
@@ -159,12 +188,12 @@
             position: absolute;
             left: -10px;
             top: 35%;
-            height: 180px;
-            width: 40px;
+            height: 220px;
+            width: 50px;
             background-color: #270f13;
             color: white;
             opacity: 0.3;
-            font-size: 48px;
+            font-size: 60px;
             letter-spacing: 3px;
             padding: 6px 20px 20px 12px;
             transition: 1s;
@@ -285,7 +314,7 @@
             display: flex;
             flex-wrap: wrap;
             margin: auto;
-            background-color: #1A1A1A;
+            background-color: #270f13;
             font-size: 18px;
         }
 
@@ -362,26 +391,7 @@
             filter: grayscale(0%) brightness(1);
         }
 
-        @media screen and (max-width:992px) {
-            .col-sm-6 {
-                width: 100%;
-            }
-            .order-1 {
-                order: 1;
-            }
-            .order-2 {
-                order: 2;
-            }
-            .hot1,
-            .hot2,
-            .hot3 {
-                width: 100%;
-            }
-            .hot2 h2,
-            .hot3 h2 {
-                border: none;
-            }
-        }
+
 
 
         #whatis {
@@ -484,7 +494,7 @@
             flex: 1;
         }
 
-        
+
 
         .hot1,
         .hot2,
@@ -521,8 +531,7 @@
         }
 
         .hot2 h2,
-        .hot3 h2 {
-        }
+        .hot3 h2 {}
 
         .hot2 p,
         .hot3 p {
@@ -531,7 +540,7 @@
         }
 
         .hot1 p {
-            padding: 0 40px;
+            padding: 0px 40px 20px 40px;
             line-height: 28px;
         }
 
@@ -737,45 +746,176 @@
             line-height: 32px
         }
 
-        .form_BOX {
-            top: 1000px;
-            width: 500px;
-            border: solid 1px;
+        .footer {
+            width: 100%;
+            height: 300px;
+            background: #47232b;
             position: relative;
-            margin: auto;
+            bottom: -1000px;
+            color: white;
         }
 
-        
+        .footerbox_Large {
+            width: 768px;
+            height: 100%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            line-height: 40px;
+            letter-spacing: 1px;
+        }
+
+        .footerbox_Large a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .footer_left {
+            width: 50%;
+            height: 200px;
+            position: relative;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+
+        .footer_right {
+            width: 25%;
+            height: 200px;
+            position: relative;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+
+        .footer_right2 {
+            width: 25%;
+            height: 200px;
+            position: relative;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+
+        .facebook_icon {
+            max-height: 80px;
+            max-width: 80px;
+        }
+
+        @media screen and (max-width:992px) {
+
+            .col-sm-6 {
+                width: 100%;
+            }
+            .order-1 {
+                order: 1;
+            }
+            .order-2 {
+                order: 2;
+            }
+            .hot1,
+            .hot2,
+            .hot3 {
+                width: 100%;
+            }
+            .hot2 h2,
+            .hot3 h2 {
+                border: none;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .footer {
+                height: 600px;
+            }
+            .footerbox_Large {
+                width: 100%;
+                height: 100%;
+            }
+            .footer_left {
+                width: 100%;
+                height: 200px;
+                top: 0;
+                transform: translate(0, 25px);
+            }
+            .footer_right,
+            .footer_right2 {
+                width: 49%;
+                top: 28px;
+
+            }
+            .menu {
+                width: 100%;
+                height: auto;
+            }
+            .menu ul {
+                display: block;
+                max-height: 0;
+                overflow: hidden;
+                -webkit-transition: max-height 0.3s;
+                -moz-transition: max-height 0.3s;
+                -ms-transition: max-height 0.3s;
+                -o-transition: max-height 0.3s;
+                transition: max-height 0.3s;
+                /*Para fazer com que o menu saia da esquerda, você deve trocar max-height por max-width*/
+                /*Para fazer com que o menu saia da direita, você deve trocar max-height por max-width e setar float: right*/
+            }
+            .menu ul a {
+                text-align: left;
+                width: 100%;
+                height: 50px;
+                background-color: #F2F2F2;
+                padding: 10px 0px 10px 5%;
+            }
+            .menu-icon {
+                width: 100px;
+                height: inherit;
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                line-height: 60px;
+            }
+            #menuToggle:checked~ul {
+                max-height: 350px;
+                /*Para fazer com que o menu saia da esquerda ou direita, você deve trocar max-height por max-width*/
+            }
+            .menu-icon i {
+                font-size: 1.7em;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <div class="nav">
-        <div class="mail"></div>
-        <div class="logo">logo</div>
-        <div class="contact">contact
-
-        </div>
-        <ul>
-            <li>
-                <a href="#News">最新消息</a>
-            </li>
-            <li>
-                <a href="#whatis">什麼是桌遊?</a>
-            </li>
-            <li>
-                <a href="#hots">熱門遊戲</a>
-            </li>
-            <li>
-                <a href="#menus">精緻餐點</a>
-            </li>
-            <li>
-                <a href="#consume">消費模式</a>
-            </li>
-        </ul>
-
-    </div>
-    <div class="indexpic">
+    <header>
+        <figure class="brand">
+            <a href="#indexpic">
+                <img src="img/logo.png" class="logo_img" alt="">
+            </a>
+        </figure>
+        <nav class="menu">
+            <input type="checkbox" id="menuToggle">
+            <label for="menuToggle" class="menu-icon">
+                <i class="fa fa-bars"></i>
+            </label>
+            <ul>
+                <a href="#News">
+                    <li>最新消息</li>
+                </a>
+                <a href="#whatis">
+                    <li>什麼是桌遊?</li>
+                </a>
+                <a href="#hots">
+                    <li>熱門遊戲</li>
+                </a>
+                <a href="#menus">
+                    <li>精緻餐點</li>
+                </a>
+                <a href="#consume">
+                    <li>消費模式</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+    <div id="indexpic">
         <div class="index_text">
             <img src="/img/icon-hours.png" class="openPhoneimg1" alt="">
             <div class="openPhone_text1">平日：1500-2200週五：1500-2300</div>
@@ -991,25 +1131,34 @@
         <h2>玩飛鏢</h2>
         <p>50元/位</p>
     </div>
-    <div class="Contact">Contact</div>
-    <form>
-        <div class="form_BOX">
-            <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    <div class="footer">
+        <div class="footerbox_Large">
+            <div class="footer_left">
+                豐原桌上說桌遊館
+                <br> 台中市豐原區和平街49號2樓
+                <br> 04-25260200
+                <br>
+                <a href="https://zh-tw.facebook.com/letstablegame/">
+                    <img src="img/facebook_icon.png" class="facebook_icon" alt="">
+                </a>
             </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            <div class="footer_right">
+                <a href="#News">最新消息</a>
+                <br>
+                <a href="#whatis">什麼是桌遊?</a>
+                <br>
+                <a href="#hots">熱門遊戲</a>
+                <br>
+                <a href="#menus">精緻餐點</a>
+                <br>
+                <a href="#consume">消費模式</a>
+                <br>
             </div>
-            <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            <div class="footer_right2">
+
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
         </div>
-    </form>
+    </div>
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/aos.js"></script>
     <script>
@@ -1024,7 +1173,7 @@
         // ------------------------------
 
         function scrollNav() {
-            $('.nav a').click(function () {
+            $('.menu a,.brand a,.footer a').click(function () {
                 //Toggle Class
                 $(".active").removeClass("active");
                 $(this).closest('li').addClass("active");
